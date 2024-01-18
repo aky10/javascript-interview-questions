@@ -1446,25 +1446,23 @@
     ```javascript
     const promise=new promise((resolve,reject)=>{
 
-  setTimeout(() => {
-    const flag=true;
-    if(flag){
-      resolve("promise resolved");
+    setTimeout(() => {
+      const flag=true;
+      if(flag){
+        resolve("promise resolved");
+      }
+      else{
+        reject("promise rejected");
+      }
+      },5000);
+    });
+    promise.then((res)=>{
+      console.log(res);
+    })
+    .catch((err)){
+      console.log(err);
     }
-    else{
-      reject("promise rejected");
-    }
-  },5000);
-});
-
-promise.then((res)=>{
-  console.log(res);
-})
-.catch((err)){
-  console.log(err);
-}
-```
-
+    ```
     The action flow of a promise will be as below,
 
     ![Screenshot](images/promises.png)
