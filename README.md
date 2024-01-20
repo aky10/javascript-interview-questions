@@ -11039,6 +11039,24 @@ The length of the array 'arr' has been set to 0, so the array becomes empty.
 </details>
 ---
 
+#### 80. What is the output of below code?
+
+```javascript
+console.log("a");
+setTimeOut(()=> consol.log("time"),0);
+Promise.resolve(()=> console.log("promise").then(res)=> res());
+console.log("b");
+```
+
+
+##### Answer: 4
+
+a since first
+b since last
+promise / since its a promise so it will run after whole code is been executed at last ast it will be in microtask queue
+time / since its a setTimeout so it will run after whole code is been executed at last ast it will be in task queue
+microtask queue has more priority than task queue to go inside callstack
+
 **[⬆ Back to Top](#table-of-contents)**
 
 #### 81. How do you verify two strings are anagrams?
