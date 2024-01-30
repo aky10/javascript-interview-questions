@@ -2214,7 +2214,8 @@
      **[⬆ Back to Top](#table-of-contents)**
 
 109. ### What is an event delegation
-
+     learn from road side coder video
+    
      Event delegation is a technique for listening to events where you delegate a parent element as the listener for all of the events that happen inside it.
 
      For example, if you wanted to detect field changes in inside a specific form, you can use event delegation technique,
